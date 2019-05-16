@@ -1,0 +1,79 @@
+:root{
+     --font-size: 1rem;
+     --main-color: #da2828;
+     --text-color: black;
+     --line-height: 1.5;
+     --shadow-color: blue;
+     --x-shadow: 0.3rem;
+     --y-shadow: 0.5rem;
+     --shadow-blur: 0.3rem
+}
+
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+body{
+     height: 100vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     background: var(--main-color);
+}
+
+.range-input-controls,.color-input-controls{
+     position: fixed;
+     background: rgba(225, 225, 225, 0.75);
+     padding: 1.5em 1.5em;
+     display: flex;
+     flex-direction: column;
+}
+
+.range-input-controls{
+     top:0.5em;
+     left: 0.5em;
+}
+
+.color-input-controls{
+     top:0.5em;
+     right: 0.5em;
+}
+
+main{
+     margin: 5em;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+h2{
+     font-size: calc(var(--font-size) + 1em );
+     color: var(--text-color);
+     margin: 0.4em;
+}
+
+p{
+     color: var(--text-color);   
+     font-size: var(--font-size);
+     line-height: var(--line-height);
+}
+
+button{
+     padding: 1.3rem 1.7rem;
+     border: none;
+     font-size: 1.3rem;
+     margin-top: 2rem;
+     border-radius: .25em;  
+     background: var(--text-color);
+     color: var(--main-color);
+     cursor: pointer;
+     box-shadow: var(--x-shadow) var(--y-shadow) var(--shadow-blur)  var(--shadow-color);
+     transition: box-shadow 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+button:hover{
+     box-shadow:calc(var(--x-shadow) + 0.3rem)  calc(var(--y-shadow) + 0.3rem)  calc(var(--shadow-blur) + 0.6rem)  var(--shadow-color);
+}
